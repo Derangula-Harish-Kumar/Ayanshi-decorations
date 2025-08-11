@@ -1268,6 +1268,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Phone, MessageCircle, Instagram, Star, Calendar, Heart, Gift, Sparkles, Camera, Users, Award, Mail, MapPin, Clock } from 'lucide-react';
+import logo from "./assets/logo.png";  // adjust path to where your image is
+
 
 const DecorationWebsite = () => {
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
@@ -1591,8 +1593,11 @@ const DecorationWebsite = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-pink-500" />
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden" >
+                {/* <Sparkles className="w-6 h-6 text-pink-500" /> */}
+                <img src={logo} alt="Logo" className=" object-cover" />
+
+                
               </div>
               <div className="text-white">
                 <div className="text-lg font-bold">Ayanshi Wedding Planner</div>
