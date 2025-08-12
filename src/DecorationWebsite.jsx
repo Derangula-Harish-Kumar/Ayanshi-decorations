@@ -1266,9 +1266,16 @@
 
 
 
+
+
+
+
+
+
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Phone, MessageCircle, Instagram, Star, Calendar, Heart, Gift, Sparkles, Camera, Users, Award, Mail, MapPin, Clock } from 'lucide-react';
 import logo from "./assets/logo.png";  // adjust path to where your image is
+import MyQR from './Qrcode.jsx';
 
 
 const DecorationWebsite = () => {
@@ -1280,30 +1287,32 @@ const DecorationWebsite = () => {
   // Hero Slider Data - Using more relevant decoration images
   const heroSlides = [
     {
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=600&fit=crop",
+      image: "/main-images/wedding.jpeg",
       title: "Magical Wedding Decorations",
       subtitle: "Transform your special day into a fairy tale",
       overlay: "bg-gradient-to-r from-pink-500/70 to-purple-600/70"
     },
     {
-      image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=1200&h=600&fit=crop",
+      image: "/main-images/baloon.jpeg",
       title: "Elegant Birthday Celebrations",
       subtitle: "Make every birthday unforgettable with stunning decorations",
       overlay: "bg-gradient-to-r from-blue-500/70 to-teal-600/70"
     },
     {
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=600&fit=crop",
+      image: "/main-images/flower.jpeg",
       title: "Beautiful Floral Arrangements",
       subtitle: "Fresh flowers that speak the language of love",
       overlay: "bg-gradient-to-r from-rose-500/70 to-pink-600/70"
     },
     {
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop",
+      image: "/main-images/bambu.jpeg",
       title: "Bamboo & Nature Decorations",
       subtitle: "Eco-friendly decorations for sustainable celebrations",
       overlay: "bg-gradient-to-r from-green-500/70 to-emerald-600/70"
     }
   ];
+
+
 
   // Services Slider Data
   const serviceSlides = [
@@ -1347,82 +1356,82 @@ const DecorationWebsite = () => {
   // Gallery Slider Data - 16 images total
   const gallerySlides = [
     {
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop",
+      image: "/portfolio-images/wedding-1.jpeg",
       title: "Royal Wedding Setup",
       category: "Wedding"
     },
     {
-      image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop",
+      image: "main-images/baloon.jpeg",
       title: "Balloon Paradise",
       category: "Birthday"
     },
     {
-      image: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=400&h=300&fit=crop",
+      image: "/portfolio-images/wedding-2.jpeg",
       title: "Floral Elegance",
       category: "Anniversary"
     },
     {
-      image: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=400&h=300&fit=crop",
+      image: "/portfolio-images/wedding-3.jpeg",
       title: "Garden Wedding",
       category: "Wedding"
     },
     {
-      image: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=400&h=300&fit=crop",
+      image: "/main-images/baloon.jpeg",
       title: "Kids Birthday Theme",
       category: "Birthday"
     },
     {
-      image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=300&fit=crop",
+      image: "/portfolio-images/mandapam-1.jpeg",
       title: "Corporate Gala",
       category: "Corporate"
     },
     {
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+      image: "/portfolio-images/bamboo-1.jpeg",
       title: "Bamboo Arch Wedding",
       category: "Bamboo"
     },
     {
-      image: "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=400&h=300&fit=crop",
+      image: "/portfolio-images/mandapam-2.jpeg",
       title: "Rose Garden Setup",
       category: "Flowers"
     },
     {
-      image: "https://images.unsplash.com/photo-1520637836862-4d197d17c787?w=400&h=300&fit=crop",
+      image: "/portfolio-images/wedding-4.jpeg",
       title: "Balloon Ceiling Decor",
       category: "Balloon"
     },
     {
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop",
+      image: "/portfolio-images/wedding-5.jpeg",
       title: "Elegant Table Setting",
       category: "Wedding"
     },
     {
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+      image: "/portfolio-images/mandapam-3.jpeg",
       title: "Tropical Flower Arrangement",
       category: "Flowers"
     },
     {
-      image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+      image: "/portfolio-images/mandapam-5.jpeg",
       title: "Colorful Birthday Balloons",
       category: "Birthday"
     },
     {
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+      image: "/portfolio-images/bamboo-2.jpeg",
       title: "Natural Bamboo Backdrop",
       category: "Bamboo"
     },
     {
-      image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&h=300&fit=crop",
+      image: "/portfolio-images/wedding-6.jpeg",
       title: "Luxury Wedding Mandap",
       category: "Wedding"
     },
     {
-      image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop",
+      image: "/portfolio-images/mandapam-6.jpeg",
       title: "Rainbow Balloon Arch",
       category: "Balloon"
     },
     {
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop",
+      image: "/portfolio-images/bamboo-3.jpeg",
       title: "Corporate Event Stage",
       category: "Corporate"
     }
@@ -1649,13 +1658,13 @@ const DecorationWebsite = () => {
         {/* Hero Navigation Buttons */}
         <button 
           onClick={prevHeroSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 rounded-full p-3 transition-all duration-300"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 rounded-full p-3 transition-all duration-300 hidden md:block" 
         >
           <ChevronLeft className="h-6 w-6 text-white" />
         </button>
         <button 
           onClick={nextHeroSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 rounded-full p-3 transition-all duration-300"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 rounded-full p-3 transition-all duration-300 hidden md:block"
         >
           <ChevronRight className="h-6 w-6 text-white" />
         </button>
@@ -1968,8 +1977,9 @@ const DecorationWebsite = () => {
               <div className="bg-white rounded-2xl shadow-xl p-8">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">About Owner</h3>
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-10 w-10 text-white" />
+                  <div className="w-40 h-38 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                    {/* <Users className="h-10 w-10 text-white" /> */}
+                    <img src="/owner-images/owner-image.jpeg" alt="owner image"/>
                   </div>
                   <h4 className="text-xl font-bold text-gray-800 mb-2">Ashok Dammu</h4>
                   <p className="text-gray-600 mb-4">Owner & Creative Director</p>
@@ -1979,6 +1989,7 @@ const DecorationWebsite = () => {
             </div>
           </div>
         </div>
+        
       </section>
 
       {/* Floating Action Button */}
@@ -2060,6 +2071,7 @@ const DecorationWebsite = () => {
           </div>
           
           {/* Bottom Footer */}
+          
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
             <div className="flex justify-center items-center space-x-6 mb-4">
               <Award className="h-6 w-6 text-yellow-500" />
