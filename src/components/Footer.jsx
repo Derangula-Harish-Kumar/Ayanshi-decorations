@@ -1,7 +1,19 @@
 import {Phone, MessageCircle, Instagram, Sparkles, Award, Mail, MapPin, Clock } from 'lucide-react';
 
 
-const Footer = ({ handleWhatsApp, handleInstagram, handlePhone }) => {
+const Footer = () => {
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/+919100602001?text=Hello! I would like to inquire about decoration services from Ayanshi Wedding Planner.', '_blank');
+  };
+
+  const handleInstagram = () => {
+    window.open('https://www.instagram.com/ayanshi_wedding_planner?igsh=MXJsZXlhd2gzazhueQ%3D%3D&utm_source=qr', '_blank');
+  };
+
+  const handlePhone = () => {
+    window.open('tel:+919100602001', '_blank');
+  };
+
   return (
     <div>
        <footer className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white py-12">

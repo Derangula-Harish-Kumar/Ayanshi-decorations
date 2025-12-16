@@ -1,9 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { testimonials } from '../data/testimonialsData'; // Import testimonials data
 
 const Reviews = () => {
   const [currentTestimonialSlide, setCurrentTestimonialSlide] = useState(0);
+
+  useEffect(() => {
+    const testimonialInterval = setInterval(() => {
+      setCurrentTestimonialSlide(prev => (prev + 1) % testimonials.length);
+    }, 4500);
+
+    return () => {
+      clearInterval(testimonialInterval);
+    };
+  }, []);
 
   const nextTestimonialSlide = () => {
     setCurrentTestimonialSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
