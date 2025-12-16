@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, ScrollRestoration } from 'react-router-dom';
 import Decoration from './Decoration.jsx';
 import PageWeddingDecorations from './Pages/PageWeddingDecorations.jsx';
 import MandapamDecorationPage from './Pages/MandapamDecorationPage.jsx';
@@ -13,6 +13,7 @@ const App = () => {
   return (
     <>
       <NavBar />
+      <ScrollRestoration />
       <Routes>
         <Route path="/" element={<Decoration />} />
         <Route path="/wedding-decorations" element={<PageWeddingDecorations />} />
