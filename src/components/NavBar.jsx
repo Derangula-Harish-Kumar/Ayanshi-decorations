@@ -23,9 +23,9 @@ const NavBar = () => {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Home</Link>
-              <a href="#services" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Services</a>
-              <a href="#gallery" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Gallery</a>
-              <a href="#contact" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Contact</a>
+              <Link to="/#services" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Services</Link>
+              <Link to="/#gallery" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Gallery</Link>
+              <Link to="/#contact" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Contact</Link>
             </div>
           </div>
         </div>

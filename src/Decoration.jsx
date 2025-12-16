@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom'; // Import useLocation
 import { ImagesShow } from './components/ImagesShow.jsx';
 import Reviews from './components/Reviews.jsx';
 import { testimonials } from './data/testimonialsData'; // Import testimonials data
@@ -12,6 +13,7 @@ import Contact from './components/Contact.jsx';
 
 const Decoration = () => {
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
+  const location = useLocation(); // Initialize useLocation
  
   // Auto-scroll functionality for all sliders
   useEffect(() => {
@@ -23,6 +25,16 @@ const Decoration = () => {
       clearInterval(heroInterval);
     };
   }, [heroSlides.length]);
+
+  // Scroll to anchor when hash changes
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]); // Re-run when location changes
 
   // Navigation functions
   const nextHeroSlide = () => setCurrentHeroSlide((prev) => (prev + 1) % heroSlides.length);
