@@ -5,27 +5,27 @@ export function ImagesShow(){
         {
             title: "Mandapam Decoration",
             bgColor: "#D2FCED",
-            path: "/decorations/mandapam-decoration"
+            path: "/mandapam-decoration"
         },
         {
             title: "Wedding Decorations",
             bgColor: "#FEE5EC",
-            path: "/decorations/wedding-decorations"
+            path: "/wedding-decorations"
         },
         {
             title: "Haldi Decoration",
             bgColor: "#FEF7C3",
-            path: "/decorations/haldi-decoration"
+            path: "/haldi-decoration"
         },
         {
             title: "Pandiri Designs",
             bgColor: "#c8eaf8",
-            path: "/decorations/pandiri-designs"
+            path: "/pandiri-designs"
         },
         {
             title: "Birthday Partys",
             bgColor: "#77aba4",
-            path: "/decorations/birthday-partys"
+            path: "/birthday-partys"
         }
     ];
 
