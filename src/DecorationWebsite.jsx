@@ -2,9 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Phone, MessageCircle, Instagram, Star, Calendar, Heart, Gift, Sparkles, Camera, Users, Award, Mail, MapPin, Clock } from 'lucide-react';
-import logo from "./assets/logo.png";  // adjust path to where your image is
 import MyQR from './Qrcode.jsx';
 import { ImagesShow } from './components/ImagesShow.jsx';
+import NavBar from './components/NavBar.jsx';
+import Reviews from './components/Reviews.jsx';
+import { testimonials } from './data/testimonialsData'; // Import testimonials data
 
 
 const DecorationWebsite = () => {
@@ -166,45 +168,7 @@ const DecorationWebsite = () => {
     }
   ];
 
-  // Testimonials Data
-  const testimonials = [
-    {
-      name: "Priya Sharma",
-      rating: 5,
-      comment: "Absolutely stunning work! They transformed our wedding venue into a dream location. Highly recommended!",
-      event: "Wedding Decoration"
-    },
-    {
-      name: "Raj Patel",
-      rating: 5,
-      comment: "Amazing balloon decorations for my daughter's birthday. The kids were thrilled! Professional service.",
-      event: "Birthday Party"
-    },
-    {
-      name: "Meera Singh",
-      rating: 5,
-      comment: "Beautiful flower arrangements for our anniversary celebration. Exceeded our expectations completely.",
-      event: "Anniversary"
-    },
-    {
-      name: "Amit Kumar",
-      rating: 5,
-      comment: "Professional setup for our corporate event. Everything was perfect and on time. Great team!",
-      event: "Corporate Event"
-    },
-    {
-      name: "Neha Gupta",
-      rating: 5,
-      comment: "The bamboo decorations were unique and eco-friendly. Ashok's team did an incredible job!",
-      event: "Garden Wedding"
-    },
-    {
-      name: "Rohit Verma",
-      rating: 5,
-      comment: "Outstanding balloon arrangements! My son's birthday party was magical thanks to Ayanshi Wedding Planner.",
-      event: "Kids Birthday"
-    }
-  ];
+ 
 
   // Auto-scroll functionality for all sliders
   useEffect(() => {
@@ -327,30 +291,7 @@ const DecorationWebsite = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Navigation - Fixed header */}
-      <nav className="fixed top-0 w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 z-50 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden" >
-                {/* <Sparkles className="w-6 h-6 text-pink-500" /> */}
-                <img src={logo} alt="Logo" className=" object-cover" />
-
-                
-              </div>
-              <div className="text-white">
-                <div className="text-lg font-bold">Ayanshi Wedding Planner</div>
-                <div className="text-xs opacity-90">Creating Magical Moments</div>
-              </div>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Home</a>
-              <a href="#services" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Services</a>
-              <a href="#gallery" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Gallery</a>
-              <a href="#contact" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+        <NavBar />
 
       {/* Hero Slider Section */}
       <section id="home" className="relative h-screen overflow-hidden">
@@ -526,52 +467,7 @@ const DecorationWebsite = () => {
       </section>
 
       {/* Testimonials Slider Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-white/90">Real experiences from our happy customers</p>
-          </div>
-          
-          <div className="relative">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className={`transition-all duration-500 ${
-                  index === currentTestimonialSlide 
-                    ? 'opacity-100 transform translate-x-0' 
-                    : 'opacity-0 transform translate-x-full absolute top-0 left-0 right-0'
-                }`}
-              >
-                <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-                  <div className="flex justify-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-6 w-6 text-yellow-500 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 text-lg mb-6 italic">"{testimonial.comment}"</p>
-                  <h4 className="text-xl font-bold text-gray-800">{testimonial.name}</h4>
-                  <p className="text-gray-600">{testimonial.event}</p>
-                </div>
-              </div>
-            ))}
-            
-            {/* Testimonial Navigation Buttons */}
-            <button 
-              onClick={prevTestimonialSlide}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300"
-            >
-              <ChevronLeft className="h-6 w-6 text-gray-600" />
-            </button>
-            <button 
-              onClick={nextTestimonialSlide}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300"
-            >
-              <ChevronRight className="h-6 w-6 text-gray-600" />
-            </button>
-          </div>
-        </div>
-      </section>
+        <Reviews />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
