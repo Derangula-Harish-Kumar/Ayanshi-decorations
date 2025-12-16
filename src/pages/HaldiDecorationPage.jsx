@@ -1,8 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
+import ImageGallery from '../components/ImageGallery.jsx';
 
 const HaldiDecorationPage = () => {
+  const haldiImages = [
+    { src: 'https://source.unsplash.com/random/800x600?haldi', alt: 'Haldi Decoration 1' },
+    { src: 'https://source.unsplash.com/random/600x800?haldi', alt: 'Haldi Decoration 2' },
+    { src: 'https://source.unsplash.com/random/800x600?haldi', alt: 'Haldi Decoration 3' },
+    { src: 'https://source.unsplash.com/random/600x800?haldi', alt: 'Haldi Decoration 4' },
+    { src: 'https://source.unsplash.com/random/800x600?haldi', alt: 'Haldi Decoration 5' },
+    { src: 'https://source.unsplash.com/random/600x800?haldi', alt: 'Haldi Decoration 6' },
+  ];
+
   return (
     <div className="pt-16">
       <div className="flex items-center justify-between p-4">
@@ -12,9 +22,7 @@ const HaldiDecorationPage = () => {
         </Link>
         <h1 className="text-2xl font-bold">Haldi Decoration</h1>
       </div>
-      <div className="p-4">
-        <p>Details for Haldi Decoration will be displayed here.</p>
-      </div>
+      <ImageGallery images={haldiImages} />
     </div>
   );
 };
