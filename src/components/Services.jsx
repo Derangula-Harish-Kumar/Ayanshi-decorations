@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Star, Heart, Gift, Sparkles, Users, Camera } from 'lucide-react';
 
 const Services = () => {
@@ -72,8 +73,8 @@ const Services = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentServiceSlide * 100}%)` }}
             >
-              {serviceSlides.map((service, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-4">
+              {serviceSlides.map((service, index) => {
+                const serviceCard = (
                   <div className={`bg-gradient-to-br ${service.color} rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300`}>
                     <div className="text-center mb-6">
                       <div className="mb-4 flex justify-center">{service.icon}</div>
@@ -89,8 +90,18 @@ const Services = () => {
                       ))}
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+
+                return (
+                  <div key={index} className="w-full flex-shrink-0 px-4">
+                    {service.title === "Wedding Decorations" ? (
+                      <Link to="/wedding-decorations">{serviceCard}</Link>
+                    ) : (
+                      serviceCard
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
           
