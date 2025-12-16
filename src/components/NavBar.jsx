@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png"
 
 const NavBar = () => {
@@ -21,7 +22,7 @@ const NavBar = () => {
               
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Home</a>
+              <Link to="/" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Home</Link>
               <a href="#services" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Services</a>
               <a href="#gallery" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Gallery</a>
               <a href="#contact" className="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-105">Contact</a>
