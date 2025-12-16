@@ -28,5 +28,3 @@ const PageWeddingDecorations = () => {
 };
 
 export default PageWeddingDecorations;
-
-export default PageWeddingDecorations;
