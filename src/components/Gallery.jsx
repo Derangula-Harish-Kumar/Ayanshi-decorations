@@ -12,7 +12,7 @@ const Gallery = () => {
       category: "Wedding"
     },
     {
-      image: "main-images/baloon.jpeg",
+      image: "/main-images/baloon.jpeg",
       title: "Balloon Paradise",
       category: "Birthday"
     },
