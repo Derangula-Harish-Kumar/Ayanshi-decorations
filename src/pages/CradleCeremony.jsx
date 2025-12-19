@@ -4,9 +4,10 @@ import { ChevronLeft } from 'lucide-react';
 import ImageCard from './Gallery/ImageCard.jsx';
 import LoadingSkeleton from './Gallery/LoadingSkeleton.jsx';
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_medGXLmdUMOybbsLpVcFIxRqAfwsZtjUX-HHMYFAq2X6oGGTqtnRP33HYFoS3HhS/exec";
+// this is the Apps Script code wich modified from google derive
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzHRylWef_KHOViZ_el9f5qOCNAaLwcGJVWgbDq1vV2M1ooWC6WUrUomH6S00hRF460/exec";
 
-const PandiriDesignsPage = () => {
+const CradleCeremony = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -84,13 +85,13 @@ const PandiriDesignsPage = () => {
         
         <div className="container mx-auto px-4">
           <p className="mb-2 font-body text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground">
-            Elegant Structures
+            Joyful Beginnings
           </p>
           <h1 className="font-display font-Charm text-4xl font-light tracking-wide text-foreground sm:text-5xl md:text-6xl">
-            Pandiri Designs
+            Cradle Ceremony Decorations
           </h1>
           <p className="mx-auto mt-4 max-w-xl font-body text-base font-light text-muted-foreground">
-            Browse our collection of beautiful pandiri and tent designs for every occasion
+            Discover our curated collection of exquisite cradle ceremony decoration inspirations
           </p>
           
           {/* Decorative divider */}
@@ -168,7 +169,7 @@ const PandiriDesignsPage = () => {
       <footer className="border-t border-border/50 bg-card/50 py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="font-body text-xs text-muted-foreground">
-            Crafted with love for your special day
+            Crafted with love for your little one's special day
           </p>
         </div>
       </footer>
@@ -176,4 +177,4 @@ const PandiriDesignsPage = () => {
   );
 };
 
-export default PandiriDesignsPage;
+export default CradleCeremony;

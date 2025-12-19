@@ -5,10 +5,12 @@ import './index.css'
 import App from './App.jsx'
 import Decoration from './Decoration.jsx'
 import PageWeddingDecorations from './pages/PageWeddingDecorations.jsx';
-import MandapamDecorationPage from './pages/MandapamDecorationPage.jsx';
+
 import HaldiDecorationPage from './pages/HaldiDecorationPage.jsx';
 import PandiriDesignsPage from './pages/PandiriDesignsPage.jsx';
 import BirthdayPartysPage from './pages/BirthdayPartysPage.jsx';
+import CradleCeremony from "./pages/CradleCeremony.jsx";
+import BabyShowerPage from "./pages/BabyShowerPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,8 +26,8 @@ const router = createBrowserRouter([
         element: <PageWeddingDecorations />,
       },
       {
-        path: "/mandapam-decoration",
-        element: <MandapamDecorationPage />,
+        path: "/Cradle-Ceremony",
+        element: <CradleCeremony />,
       },
       {
         path: "/haldi-decoration",
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/birthday-partys",
         element: <BirthdayPartysPage />,
+      },
+      {
+        path: "/baby-shower",
+        element: <BabyShowerPage />,
       },
     ]
   }

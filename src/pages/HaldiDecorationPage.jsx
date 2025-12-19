@@ -129,7 +129,7 @@ const HaldiDecorationPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen gradient-hero pt-16">
+    <div className="min-h-screen gradient-hero pt-16 bg-[#F7F3EB]">
       {/* Back Button */}
       <div className="flex items-center p-4">
         <Link to="/" className="flex items-center text-gray-600 hover:text-gray-800">
@@ -147,7 +147,7 @@ const HaldiDecorationPage = () => {
           <p className="mb-2 font-body text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground">
             Joyful Rituals
           </p>
-          <h1 className="font-display text-4xl font-light tracking-wide text-foreground sm:text-5xl md:text-6xl">
+          <h1 className="font-display font-Charm text-4xl font-light tracking-wide text-foreground sm:text-5xl md:text-6xl">
             Haldi Decorations
           </h1>
           <p className="mx-auto mt-4 max-w-xl font-body text-base font-light text-muted-foreground">

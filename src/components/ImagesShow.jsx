@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 export function ImagesShow(){
     const categories = [
         {
-            title: "Mandapam Decoration",
+            title: "Cradle Ceremony",
             bgColor: "#D2FCED",
-            path: "/mandapam-decoration",
-            image: "/portfolio-images/mandapam-1.jpeg"
+            path: "/Cradle-Ceremony",
+            image: "/portfolio-images/CradleCeremony.jpeg"
         },
         {
             title: "Wedding Decorations",
@@ -31,6 +31,12 @@ export function ImagesShow(){
             bgColor: "#77aba4",
             path: "/birthday-partys",
             image: "/main-images/baloon.jpeg"
+        },
+        {
+            title: "Baby shower",
+            bgColor: "#77aba4",
+            path: "/baby-shower",
+            image: "/portfolio-images/BabyShower.jpeg"
         }
     ];
 
