@@ -4,11 +4,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Decoration from './Decoration.jsx'
-import PageWeddingDecorations from './Pages/PageWeddingDecorations.jsx'
-import MandapamDecorationPage from './Pages/MandapamDecorationPage.jsx'
-import HaldiDecorationPage from './Pages/HaldiDecorationPage.jsx'
-import PandiriDesignsPage from './Pages/PandiriDesignsPage.jsx'
-import BirthdayPartysPage from './Pages/BirthdayPartysPage.jsx'
+import PageWeddingDecorations from './pages/PageWeddingDecorations.jsx';
+import MandapamDecorationPage from './pages/MandapamDecorationPage.jsx';
+import HaldiDecorationPage from './pages/HaldiDecorationPage.jsx';
+import PandiriDesignsPage from './pages/PandiriDesignsPage.jsx';
+import BirthdayPartysPage from './pages/BirthdayPartysPage.jsx';
 
 const router = createBrowserRouter([
   {

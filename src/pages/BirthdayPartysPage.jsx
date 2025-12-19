@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
 import ImageGallery from '../components/ImageGallery.jsx';
 
+//default data
 const BirthdayPartysPage = () => {
   const birthdayImages = [
     { src: 'https://source.unsplash.com/random/800x600?birthday', alt: 'Birthday Party 1' },
