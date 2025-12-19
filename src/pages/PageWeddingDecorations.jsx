@@ -4,6 +4,7 @@ import { ChevronLeft } from 'lucide-react';
 import ImageCard from './Gallery/ImageCard.jsx';
 import LoadingSkeleton from './Gallery/LoadingSkeleton.jsx';
 
+// this is the Apps Script code wich modified from google derive
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzHRylWef_KHOViZ_el9f5qOCNAaLwcGJVWgbDq1vV2M1ooWC6WUrUomH6S00hRF460/exec";
 
 const PageWeddingDecorations = () => {
