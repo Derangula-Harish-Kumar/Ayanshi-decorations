@@ -20,7 +20,44 @@ const PageWeddingDecorations = () => {
         return res.json();
       })
       .then(data => {
-        setImages(data);
+        // Normalize data into the shape expected by ImageCard: { id, name, url }
+        let raw = data;
+
+        // Some scripts wrap data inside a property like "items" or "data"
+        if (raw && !Array.isArray(raw)) {
+          raw = raw.items || raw.data || raw.images || [];
+        }
+
+        const normalized = (raw || []).map((item, index) => {
+          // If the item is just a string, treat it as a URL
+          if (typeof item === 'string') {
+            return {
+              id: index,
+              name: `Image ${index + 1}`,
+              url: item,
+            };
+          }
+
+          return {
+            id: item.id ?? index,
+            name:
+              item.name ||
+              item.title ||
+              item.fileName ||
+              item.filename ||
+              item.alt ||
+              `Image ${index + 1}`,
+            url:
+              item.url ||
+              item.imageUrl ||
+              item.src ||
+              item.link ||
+              item.href ||
+              '',
+          };
+        }).filter(img => img.url); // keep only entries that have a URL
+
+        setImages(normalized);
         setLoading(false);
       })
       .catch(err => {
@@ -31,7 +68,7 @@ const PageWeddingDecorations = () => {
   }, []);
 
   return (
-    <div className="min-h-screen gradient-hero pt-16">
+    <div className="min-h-screen gradient-hero pt-16 bg-[#F7F3EB]">
       {/* Back Button */}
       <div className="flex items-center p-4">
         <Link to="/" className="flex items-center text-gray-600 hover:text-gray-800">
@@ -49,7 +86,7 @@ const PageWeddingDecorations = () => {
           <p className="mb-2 font-body text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground">
             Elegant Celebrations
           </p>
-          <h1 className="font-display text-4xl font-light tracking-wide text-foreground sm:text-5xl md:text-6xl">
+          <h1 className="font-display font-Charm text-4xl font-light tracking-wide text-foreground sm:text-5xl md:text-6xl">
             Wedding Decorations
           </h1>
           <p className="mx-auto mt-4 max-w-xl font-body text-base font-light text-muted-foreground">

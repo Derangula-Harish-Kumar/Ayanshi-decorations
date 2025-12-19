@@ -44,7 +44,7 @@ const ImageCard = ({ id, name, url, index }) => {
 
   return (
     <div
-      className="group relative overflow-hidden rounded-xl bg-card shadow-card transition-all duration-500 ease-out"
+      className="group relative overflow-hidden rounded-xl bg-card shadow-card transition-all duration-500 ease-out bg-white"
       style={{ 
         animationDelay: `${index * 100}ms`,
         transform: isHovered ? 'translateY(-8px)' : 'translateY(0)',
@@ -112,7 +112,7 @@ const ImageCard = ({ id, name, url, index }) => {
       {/* Caption */}
       <div className="relative p-4">
         <div className="absolute -top-px left-4 right-4 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <h3 className="font-display text-lg font-medium tracking-wide text-card-foreground line-clamp-2">
+        <h3 className="font-display font-Charm text-lg font-medium tracking-wide text-card-foreground line-clamp-2">
           {displayName}
         </h3>
       </div>
