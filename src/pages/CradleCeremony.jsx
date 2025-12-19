@@ -5,7 +5,7 @@ import ImageCard from './Gallery/ImageCard.jsx';
 import LoadingSkeleton from './Gallery/LoadingSkeleton.jsx';
 
 // this is the Apps Script code wich modified from google derive
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzHRylWef_KHOViZ_el9f5qOCNAaLwcGJVWgbDq1vV2M1ooWC6WUrUomH6S00hRF460/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz9yxeLi9CbaD5fg_K0dr0JFFfVIMQT6RRnzvxyJsVVxcBII-iyn6U1_Os9cRzWNjdAqQ/exec";
 
 const CradleCeremony = () => {
   const [images, setImages] = useState([]);
@@ -88,7 +88,7 @@ const CradleCeremony = () => {
             Joyful Beginnings
           </p>
           <h1 className="font-display font-Charm text-4xl font-light tracking-wide text-foreground sm:text-5xl md:text-6xl">
-            Cradle Ceremony Decorations
+            Cradle Ceremony
           </h1>
           <p className="mx-auto mt-4 max-w-xl font-body text-base font-light text-muted-foreground">
             Discover our curated collection of exquisite cradle ceremony decoration inspirations
